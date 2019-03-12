@@ -1,23 +1,57 @@
+body{
+    background-color: grey;
+}/*
 #container{
-    width: 600px;
-    background-color: gray;
-   margin: 0 auto;
+    width: 80%;
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 60%;
 }
-div{
-    background-color: aqua;
-    height: 30px;
-    width: 75%;
+#container >div{
+    background-color:white;
+   transition: all .3s linear;
+   height: 50px;
+   width: 1px;
+   flex-grow: 1;
 }
-div.test{
-background-color: darkgreen;
-height: 30px;
-width: 30px;
-transition: all .3s linear;
+
+#container>div:nth-child(3){
+    background-color:red;
+    flex-grow: 2;
+    align-content: center;
+
 
 }
-div.test:hover{
+#container>div:hover{
+    background-color:rgb(50,50, 50);
+}
+#container>div:hover:nth-child(3){
     background-color: green;
-    height: 200px;
-    width: 200px;
-    transform:rotate(90deg);
+    transform: scaleY(1);
+    height: 100px;
+}*/
+#container{
+    width: 80%;
+    background-color: black;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+}
+#container >div{
+    background-color:white;
+   transition: all .3s linear;
+   height: 50px;
+   width: 1px;
+   flex-grow: 1;
+   border: 1px solid red;
+}
+#container>.left{
+    background-color: yellow;
+    flex-grow: 1;
+
+    border: 1px solid red;
+    flex-direction: column;
 }
