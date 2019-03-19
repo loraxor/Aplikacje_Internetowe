@@ -1,12 +1,12 @@
-body {
+body,html {
     background-color: grey;
-
+    height: 100%;
 }
 
 #container{
     background-color: lightcoral;
     width: 80%;
-    height: 150px;
+    height: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
