@@ -3,14 +3,16 @@ body,html{
     height: 100%;
 }
 #container{
-    width: 50%;
+    width: 35%;
     background-color: black;
     margin: 0 auto;
     display: grid ;
-    height: 60%;
+    height: 65%;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto 16% 16% 16% 16%;
-    border: 1px solid black;
+    border: 5px groove lightgreen;
+    padding: 10px;border-radius: 1%;
+
 
 }
 #container >div{
@@ -20,18 +22,21 @@ body,html{
     align-items: center;
     justify-content: center;
     font-family: "Lucida Console";
-    border-radius: 100%;
+    border-radius: 15%;
     color: greenyellow;
     box-shadow: 3px 3px 5px white;
+    margin: 5px;
 }
 #container >div:hover{
-    background-color: lightgrey;
+    background-color: rgba(210, 209, 211, 0.795);
+    color: green;
 
-}
+
+}#container:hover{  cursor: cell;}
 
 #container > div:nth-child(1)
 {
-
+    border-radius: 1%;
     grid-column: 1/5;
     grid-row: 1/1;
 }
