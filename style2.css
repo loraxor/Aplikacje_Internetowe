@@ -1,40 +1,40 @@
 body,html{
-    background-color: darkgray;
+    background-image: linear-gradient(to left ,black,grey);
     height: 100%;
 }
 #container{
     width: 35%;
-    background-color: rgb(0, 0, 0);
+    background-image: linear-gradient(to right ,black,grey);
     margin: 0 auto;
     display: grid ;
     height: 65%;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: auto 16% 16% 16% 16%;
-    border: 5px groove lightgreen;
+    border: 5px groove black;
     padding: 10px;border-radius: 1%;
 
 
 }
 #container >div{
-    background-color:grey;
+    background-color:black;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Lucida Console";
     border-radius: 10%;
-    color: greenyellow;
-    box-shadow: 3px 3px 5px white;
+    color: white;
+    box-shadow: 3px 3px 5px grey;
     margin: 5px;
 }
 #container >div:hover{
-    background-color: rgba(210, 209, 211, 0.795);
-    color: green;
+    background-color: rgba(100, 100, 100, 0.795);
+
 
 
 }#container:hover{  cursor: cell;}
 
-#container > div:nth-child(1)
+/* #container > div:nth-child(1)
 {
     border-radius: 1%;
     grid-column: 1/5;
@@ -129,4 +129,4 @@ body,html{
 
     grid-column: 4/4;
     grid-row: 5/5;
-}
+} */
