@@ -8,6 +8,60 @@
         console.log(c.children[i]);
     }
 */
+let buffer =0;
+let op=0;
+let clearFlag = false;
+const handleclick = e =>{
+    const d =document.getElementById('display')
+    const keyCode= e.target.textContent;
+    console.log(keyCode);
+    switch(keyCode){
+        case 'C':
+        d.textContent='0';
+        buffer = 0;
+        op=0;
+        break;
+
+        case '+':
+        case '-':
+            if(op === 0){
+                buffer = parseFloat(d.textContent);
+            }
+            else{
+                buffer+= op *parseFloat(d.textContent);
+            }
+          //  d.textContent='';
+            op =keyCode=== '+' ? 1: -1;
+            clearFlag = true;
+        break;
+
+        case '=':
+        if(op === 0){
+            buffer = parseFloat(d.textContent);
+        }
+        else{
+            buffer+= op *parseFloat(d.textContent);
+        }
+        d.textContent=buffer;
+        op =0;
+        ;
+        break;
+
+        default:
+        if(keyCode ==='0' && d.textContent==='0')return;
+        if(keyCode ==='.' && d.textContent.includes('.'))return;
+        if(d.textContent==='0' || clearFlag){
+            d.textContent=keyCode;
+            clearFlag = false;
+        }
+        else
+            d.textContent+=keyCode;
+        break;
+    }
+
+    //  d.textContent=e.target.textContent;
+//  e.target.textContent="ok";
+};
 const fields = [
     {txt : 1 , col: 1, row:4},
     {txt : 2 , col: 2, row:4},
@@ -38,14 +92,11 @@ const init=()=>{
         div.style.gridRow=element.row;
         if(element.txt==='display'){
             div.id='display';
+            div.textContent='0';
         }else{
-            div.addEventListener('click' ,e=>{
-                        const d =document.getElementById('display')
-                        d.textContent=e.target.textContent;
-                  //      e.target.textContent="ok";
-            });
-        }
-        
+            div.addEventListener('click' ,handleclick)
+        };
+
 
 
 

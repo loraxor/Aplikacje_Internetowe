@@ -28,18 +28,17 @@ body,html{
     margin: 5px;
 }
 #container >div:hover{
-    background-color: rgba(100, 100, 100, 0.795);
+   background-color:grey;
 
 
 
 }#container:hover{  cursor: cell;}
 
-/* #container > div:nth-child(1)
+
+#container > div:nth-child(16)
 {
-    border-radius: 1%;
-    grid-column: 1/5;
-    grid-row: 1/1;
-}
+    background-image: radial-gradient(grey,black,black);
+}/*
 #container > div:nth-child(2)
 {
 
